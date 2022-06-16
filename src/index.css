@@ -1,31 +1,36 @@
-.html,
-.body {
-  width: 100%;
-  height: 100%;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap");
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Roboto", "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 
-.root {
-  box-sizing: inherit;
+path {
+  transition: fill 0.4s ease;
+}
+
+#root {
   height: 100%;
   min-width: 765px;
-  min-height: 600px;
   background-color: #222;
 }
 
 .main {
   height: 90%;
-  box-sizing: inherit;
   width: 100%;
   display: flex;
 }
 
 .main__nav {
   padding-top: 24px;
-  box-sizing: inherit;
   height: 100%;
   width: 15%;
   min-width: 200px;
@@ -34,7 +39,6 @@
 
 .nav_logo__link {
   display: block;
-  box-sizing: inherit;
   height: 40px;
   padding: 0 24px;
   margin-bottom: 18px;
@@ -42,20 +46,17 @@
 
 .nav_logo__icon {
   width: 100%;
-  box-sizing: inherit;
   max-width: 131px;
   height: 40px;
 }
 
 .nav_btns {
   list-style: none;
-  box-sizing: inherit;
   padding: 0 8px;
 }
 
 .nav_btns__line {
   margin-top: 10px;
-  box-sizing: inherit;
   height: 1px;
   background-color: #333;
   border: none;
@@ -63,7 +64,6 @@
 
 .nav_btns__btn {
   padding: 0 16px;
-  box-sizing: inherit;
   display: flex;
   align-items: center;
   height: 40px;
@@ -73,43 +73,35 @@
 
 .nav_btns__btn:hover {
   cursor: pointer;
-  box-sizing: inherit;
   color: white;
 }
 
 .nav_btns__btn:hover > svg {
   fill: white;
-  box-sizing: inherit;
 }
 
 .nav_btns__btn_active {
   color: white;
-  box-sizing: inherit;
 }
 
 .nav_btns__icon {
   margin-right: 8px;
-  box-sizing: inherit;
-  transition: fill 0.4s ease;
 }
 
 .main__container {
   height: 100%;
   width: 85%;
-  box-sizing: inherit;
 }
 
 .top_bar {
   width: 100%;
   height: 64px;
-  box-sizing: inherit;
   /* background-cprofile_btnolor: aliceblue; */
 }
 
 .top_bar__header {
   padding: 16px 32px;
   height: 64px;
-  box-sizing: inherit;
   display: flex;
   justify-content: space-between;
 }
@@ -117,7 +109,6 @@
 .navigation_btns {
   max-width: 100px;
   display: flex;
-  box-sizing: inherit;
   justify-content: space-around;
   width: 12%;
 }
@@ -126,7 +117,6 @@
   background-color: #111;
   display: flex;
   align-items: center;
-  box-sizing: inherit;
   justify-content: center;
   border-radius: 50%;
   width: 32px;
@@ -135,22 +125,18 @@
 
 .navigation_btn__disabled {
   opacity: 0.5;
-  box-sizing: inherit;
 }
 
 .navigation_btn:hover {
   cursor: pointer;
-  box-sizing: inherit;
 }
 
 .navigation_btn_disabled:hover {
   cursor: not-allowed;
-  box-sizing: inherit;
 }
 .profile_btn {
   max-width: 200px;
   min-width: 130px;
-  box-sizing: inherit;
   height: 32px;
   display: flex;
   background-color: #111;
@@ -162,27 +148,37 @@
   font-weight: 600;
 }
 
+.signup_btn {
+  max-width: 130px;
+  min-width: 100px;
+  height: 32px;
+  display: flex;
+  background-color: #111;
+  border-radius: 23px;
+  width: 10%;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+}
+
 .text_ellipsis {
   white-space: nowrap;
   overflow: hidden;
-  box-sizing: inherit;
   text-overflow: ellipsis;
 }
 
 .profile_btn__titile {
   max-width: 55%;
   font-size: 0.875rem;
-  box-sizing: inherit;
 }
 
 .profile_btn__show_more {
   margin-right: 6px;
-  box-sizing: inherit;
 }
 
 /* .profile_btn__avatar {
     width: 28px;
-    box-sizing:inherit;
     height: 28px;
     background-color: #535353;
     display: flex;
@@ -195,12 +191,10 @@
 .profile_btn:hover {
   background-color: #333;
   cursor: pointer;
-  box-sizing: inherit;
 }
 
 .content {
   height: calc(100% - 64px);
-  box-sizing: inherit;
   padding: 0 32px;
   padding-top: 24px;
   overflow-y: auto;
@@ -211,7 +205,6 @@
 .content__section {
   display: flex;
   flex-wrap: wrap;
-  box-sizing: inherit;
   height: 45%;
   min-height: 350px;
   min-width: 100%;
@@ -221,7 +214,6 @@
 .section__title {
   width: 100%;
   height: 20%;
-  box-sizing: inherit;
   max-height: 50px;
   display: flex;
   margin-bottom: 16px;
@@ -231,12 +223,10 @@
 
 .section__title_text {
   margin-right: auto;
-  box-sizing: inherit;
 }
 
 .section__show_all {
   text-transform: uppercase;
-  box-sizing: inherit;
   margin-left: 8px;
   font-weight: 700;
   font-size: 0.9rem;
@@ -245,7 +235,6 @@
 
 .section__title_text:hover,
 .section__show_all:hover {
-  box-sizing: inherit;
   text-decoration: underline;
   cursor: pointer;
 }
@@ -253,62 +242,99 @@
 .section__content {
   width: 100%;
   height: 80%;
-  box-sizing: inherit;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 215px);
+  overflow: hidden;
+  grid-gap: 15px;
+  justify-content: space-between;
 }
 
-.album_card {
+.card {
   background-color: #1d1d1d;
-  box-sizing: inherit;
   height: 100%;
   padding: 16px;
-  width: 18%;
-  min-width: 215px;
-  max-width: 230px;
+  width: 215px;
   border-radius: 5px;
   transition: 0.5s;
+  display: flex;
+  flex-direction: column;
 }
 
-.album_card:hover {
+.card:hover {
   cursor: pointer;
-  box-sizing: inherit;
   background-color: #2b2b2b;
 }
 
-.album_card__image {
-  height: auto;
-  padding-bottom: 16px;
+.card__image {
+  /* height: auto; */
   height: 80%;
-  box-sizing: inherit;
+  background-color: #2d2d2d;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-.album_card__image_content {
+.card__default_image {
+  position: absolute;
+  width: 100%;
   height: 100%;
-  box-sizing: inherit;
+  top: 0;
+  left: 0;
+}
+
+.card__image_content {
+  position: relative;
+  /* height: 100%; */
   width: 100%;
 }
 
-.album_card__info {
+.card__info {
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
-  height: 20%;
+  height: 30%;
   min-height: 62px;
   color: white;
-  box-sizing: inherit;
 }
 
-.album_title {
+.card_title {
   max-height: 70%;
   font-weight: 600;
   font-size: 1rem;
-  box-sizing: inherit;
   padding-bottom: 4px;
 }
 
-.album_author {
+.card_text {
   max-height: 30%;
   font-size: 0.785rem;
   color: #cacaca;
-  box-sizing: inherit;
+}
+
+.card_content__image {
+  height: 100%;
+  margin-right: 2%;
+}
+
+.card_content__info {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  overflow: hidden;
+}
+
+.card_content__type {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.card_content__title {
+  padding: 1% 0;
+  font-size: 4rem;
+  line-height: 4rem;
 }
 
 .card_content__descripton {
@@ -396,7 +422,6 @@
 .now_playing_bar {
   border-top: 1px solid #444;
   height: 10%;
-  box-sizing: inherit;
   padding: 0 16px;
 }
 
@@ -404,29 +429,22 @@
   /* width: 100%; */
   height: 100%;
   display: flex;
-  box-sizing: inherit;
   align-items: center;
   justify-content: center;
 }
 
 .player__wrapper {
   width: 40%;
-  box-sizing: inherit;
-  height: 100%;
-  display: flex;
-  align-items: center;
 }
 
 .player {
   width: 100%;
   color: red;
-  box-sizing: inherit;
 }
 
 .player::-webkit-media-controls-panel,
 .player::-webkit-media-controls-enclosure {
   background-color: #707070;
-  box-sizing: inherit;
 }
 
 /* .player::-webkit-media-controls-play-button {
