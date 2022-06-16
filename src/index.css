@@ -17,7 +17,7 @@ path {
   transition: fill 0.4s ease;
 }
 
-#root {
+.root {
   height: 100%;
   min-width: 765px;
   background-color: #222;
